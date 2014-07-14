@@ -80,12 +80,30 @@ blockquote p {
 
 header.template-header {
 	position: absolute;
-	top: 30px;
+	top: 0;
+	width: 100%;
+	padding: 20px 0;
+}
+
+// Company Info
+.company-info,
+.companyname {
+	float: left;
+}
+.companyname {
+	margin-left: 10px;
 }
 
 // -----------------------------
 // Extended Navigation
 // -----------------------------
+
+.nav {
+	max-width: 720px;
+	@media (max-width: 960px) {
+		max-width: 100%;
+	}
+}
 
 .widget .extendednavigation a.pull {
 	top: 0;
