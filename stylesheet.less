@@ -106,6 +106,14 @@ header.template-header {
 	float: left;
 }
 
+.template-default-header {
+	position: relative;
+	background-color: @color-swatch2;
+	margin-bottom: 60px;
+	padding: 20px 0 20px 0;
+
+}
+
 // -----------------------------
 // Extended Navigation
 // -----------------------------
@@ -118,7 +126,15 @@ header.template-header {
 }
 
 .widget .extendednavigation a.pull {
-	top: 20px;
+	top: 10px;
+	background-image: image('/images/hamburger.svg');
+	height: 30px;
+	width: 30px;
+
+	&:after {
+		box-shadow: none;
+		background: none;
+	}
 }
 
 .widget.extendednavigation {

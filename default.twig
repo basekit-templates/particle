@@ -1,4 +1,35 @@
 {% extends "layout.twig" %}
 {% block content %}
 
+<section class="default">
+
+	<div class="page-content">
+
+		<header class="template-default-header clearfix">
+
+			<div class="wrapper clearfix">
+
+			<div class="company-info">
+				{{widget('logo', 'thisunqiuewidgetname', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div>
+
+			<div class="nav">
+				{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			</div>
+
+			</div>
+
+		</header>
+
+
+		<div class="wrapper">
+			{{zone('main')|raw}}
+		</div>
+	</div>
+
+	{% include 'includes/footer.twig' %}
+
+</section>
+
 {% endblock %}
