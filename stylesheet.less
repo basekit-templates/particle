@@ -12,7 +12,7 @@
 
 /*	===============================
 	Font Swatches
-	===============================	
+	===============================
 	"font1":  == Heading 1
 	"font2":  == Heading 2
 	"font3":  == Heading 3
@@ -33,7 +33,7 @@
 // Page Settings
 // -----------------------------
 
-// Wrapper 
+// Wrapper
 .wrapper {
     width: 90%;
     margin: 0 5%;
@@ -48,19 +48,19 @@ ul, li {
 	color: @color-swatch3;
 }
 
-// Blockquote 
+// Blockquote
 
 blockquote {
   background: @color-swatch7;
-  border-left: 10px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);;
+  border-left: 10px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);
   margin: 1.5em 10px;
-  padding: 0.5em 10px 0px 50px;
+  padding: 10px 10px 10px 50px;
 }
 blockquote:before {
   color: @color-swatch5;
   content: open-quote;
   font-size: 4em;
-  padding-left: 10px;
+  padding: 1px 0 10px 10px;
 }
 
 blockquote p {
@@ -94,6 +94,18 @@ header.template-header {
 	margin-left: 10px;
 }
 
+.nav {
+	float: right;
+	@media @tablet {
+		float: none;
+	}
+
+}
+
+.widget.logo {
+	float: left;
+}
+
 // -----------------------------
 // Extended Navigation
 // -----------------------------
@@ -106,7 +118,81 @@ header.template-header {
 }
 
 .widget .extendednavigation a.pull {
-	top: 0;
+	top: 20px;
+}
+
+.widget.extendednavigation {
+	z-index: 999999;
+}
+
+.widget .extendednavigation ul {
+	@media @tablet {
+		background-image: -webkit-gradient( linear, left top, left bottom, from(hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2,10%), 0.8)), to(@color-swatch2));
+		margin: 20px 0 auto;
+		padding: 15px 0 15px 0;
+	}
+	li {
+		border-bottom: none;
+		@media @tablet {
+			padding: 0px;
+		}
+		// Nav Links
+		a {
+			color: hsla(hue(@color-swatch6), saturation(@color-swatch6), lightness(@color-swatch6,10%), 0.7);
+			line-height: 40px;
+			&:hover {
+				color: @font-swatch6-color;
+			}
+		}
+		// Dropdown Menu
+		&:hover ul {
+			margin: 0;
+			width: 100%;
+			min-width: 10px;
+			background-color: darken(@color-swatch2,10%);
+			background-image: none;
+		}
+		&.folder {
+			color: @font-swatch6-color;
+			&:hover {
+				color: hsla(hue(@color-swatch6), saturation(@color-swatch6), lightness(@color-swatch6,10%), 0.7);
+  				background-color: darken(@color-swatch2,10%);
+
+			}
+			&:after {
+				border: 0;
+			}
+			span.text {
+				color: hsla(hue(@color-swatch6), saturation(@color-swatch6), lightness(@color-swatch6,10%), 0.7);
+				line-height: 40px;
+			}
+			& > .text:after {
+				display: inline-block;
+                content: "";
+               	width: 0;
+               	height: 0;
+                border: 6px solid transparent;
+                border-top-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1,10%), 0.7);
+                margin-left: 0.4em;
+                margin-bottom: -2px;
+			}
+				@media @tablet {
+					& > .text:before {
+					display: inline-block;
+	                content: "";
+	               	width: 0;
+	               	height: 0;
+	                border: 6px solid transparent;
+	                border-top-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1,10%), 0.7);
+	                margin-right: 0.4em;
+	                margin-bottom: -2px;
+	            }
+	            	& > .text:after {
+	            		display: none;
+	            }
+			}
+		}
+	}
 }
 
 // -----------------------------
@@ -114,24 +200,28 @@ header.template-header {
 // -----------------------------
 
 .widget.feature {
-	height: 700px;
-	z-index: -1;
 	margin-bottom: 60px;
 	text-align: center;
-	h2 {
-		text-shadow: 2px 2px rgba(0,0,0, .2);
-	}
-}
-
-.nav {
-	float: right;
-	right: 0;
-
-}
-
-.logo {
-	float: left;
-
+    .feature-bgimg,
+    .feature-bgimg .content {
+    	min-height: 700px;
+    	height: auto;
+    	background-repeat: no-repeat;
+        @media @tablet {
+            min-height: 400px;
+        }
+        @media @mobile {
+            min-height: 250px;
+        }
+        .content {
+            h2 {
+            	text-shadow: 2px 2px rgba(0,0,0, .2);
+            }
+            .spare {
+            	padding: 14em 0 5em;
+            }
+        }
+    }
 }
 
 // -----------------------------

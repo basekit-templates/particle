@@ -28,6 +28,18 @@
 	}
 }
 
+
+// -----------------------------
+// Company Name
+// -----------------------------
+
+.widget.companyname a {
+	font-family: @font-swatch8-font-family;
+	font-size: 40px;
+}
+
+
+
 // -----------------------------
 // Forms
 // -----------------------------
@@ -144,11 +156,11 @@ button.btn,
 .ecombasket-checkout-link,
 .widget.ecomcheckout .checkout-order-button,
 .blog-list-footer a {
-	text-transform: uppercase;
 	padding: 8px 14px;
 	background-color: @color-swatch3;
 	background-size: 18px;
 	border-radius: 0;
+	border: none;
 
 
 	// Font
@@ -172,7 +184,6 @@ button.btn,
 
 // Feature
 .widget.feature button {
-	text-transform: uppercase;
 	padding: 8px 14px;
 	border: 2px solid @color-swatch1 !important;
 	background-color: hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);
@@ -180,23 +191,11 @@ button.btn,
 	border-radius: 0;
 
 	// Font
-	color: @font-swatch7-color;
-	font-family: @font-swatch7-font-family;
-	font-size: @font-swatch7-font-size;
-	line-height: @font-swatch7-line-height;
-	letter-spacing: @font-swatch7-letter-spacing;
 	&:hover {
 		background-color: @color-swatch2;
 		color: @color-swatch1;
 		text-decoration: none;
 	}
-	&:focus {
-		-webkit-transform: translate(0, 3px);
-		-ms-transform: translate(0, 3px);
-		transform: translate(0, 3px);
-		outline: none;
-	}
-
 }
 
 // PayPal, Dropbox, Tweet
@@ -293,13 +292,16 @@ button.btn,
 	}
 	li {
 		list-style: none;
-		padding-bottom: 30px;
+		padding-bottom: 0px;
 		margin: 1.5em 10px;
-		padding: 0.5em 10px;
+/*		padding: 0.5em 10px;*/
 		background: @color-swatch7;
   		border-left: 10px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);
   		margin: 1.5em 10px;
-  		padding: 0.5em 10px 0px 50px;
+  		padding: 11px 10px 20px 20px;
+	}
+	ul li {
+		padding-bottom: 0px;
 	}
 	ul li a:hover {
 		text-decoration: none;
@@ -383,97 +385,23 @@ button.btn,
 			}
 		}
 	}
+
 	@media @mobile {
 
 	}
 }
 
-// Canvas & Bottom
-.canvas,
-.bottom-profile {
-	.profile {
-		color: @font-swatch5-color;
-		font-family: @font-swatch5-font-family;
-		font-size: @font-swatch5-font-size;
-		font-weight: @font-swatch5-font-weight;
-		line-height: @font-swatch5-line-height;
-		letter-spacing: @font-swatch5-letter-spacing;
+.widget.socialicons span a {
+	background-color: @color-swatch3;
+	&:hover{
+		background-color: @color-swatch2;
 	}
-	// Social Icon Link
-	.widget.profile .widget.socialicons .bk-profile-socialicons,
-	.icons {
-		margin: 0;
-		span {
-			@media @mobile {
-				width: 49%;
-			}
-		}
-		span a {
-			margin: 0 20px;
-			width: inherit;
-			height: inherit;
-			background-image: none;
-			background-color: hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);
-			color: @font-swatch5-color;
-			text-align: center;
-			@media @mobile {
-				margin: 0;
-				padding: 0;
-			}
-			&:hover {
-				color: @color-swatch2;
-				background-color: transparent;
-				&:hover {
-					color: @color-swatch2;
-				}
-			}
-			// Text
-			text-indent: inherit;
-			&:before {
-				display: block;
-				font-family: @font-swatch2-font-family;
-				font-size: 25px;
-				font-weight: 700;
-				color: @color-swatch4;
-			}
-		}
-	}
-	// Image Icons
+}
 
-	.bk-socialicons-linkedin a {
-		&:before {
-			content: '/images/social/socialicons-linkedin.svg';
-		}
-	}
-	.bk-socialicons-twitter a {
-		&:before {
-			content: '/images/social/socialicons-twitter.svg';
-		}
-	}
-	.bk-socialicons-facebook a {
-		&:before {
-			content: '/images/social/socialicons-facebook.svg';
-		}
-	}
-	.bk-socialicons-rss a {
-		background-position: center 1px!important;
-		&:before {
-			content: '/images/social/socialicons-rss.svg';
-		}
-	}
-	.bk-socialicons-googleplus a {
-		&:before {
-			content: '/images/social/socialicons-googleplus.svg';
-		}
-	}
-	.bk-socialicons-youtube a {
-		&:before {
-			content: '/images/social/socialicons-youtube.svg';
-		}
-	}
-	// Email
-	.bk-profile-email a {
-		color: @color-swatch2;
+.widget.profile .bk-profile-socialicons span a {
+	background-color: @color-swatch3;
+	&:hover{
+		background-color: @color-swatch2;
 	}
 }
 
@@ -576,7 +504,7 @@ button.btn,
 			}
 			a .title {
 				width: 94%;
-				border-right: 3px solid @color-swatch2;
+				border-left: 10px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);
 				background-color: @color-swatch1;
 				color: @font-swatch4-color;
 				font-family: @font-swatch4-font-family;
@@ -648,11 +576,18 @@ button.btn,
 }
 
 // Promoted Item
-.widget.menusections ul,
+.widget.menusections ul {
+	padding: 2em;
+	border-top: 1px solid @color-swatch2;
+	border-bottom: 1px solid @color-swatch2;
+}
+
 .menu .menu-items li.menu-item-promoted,
 .menu-subsection-promoted {
 	padding: 2em;
 	border-bottom: 1px solid @color-swatch2;
+	border-top: 1px solid @color-swatch2;
+	background-color: @color-swatch7;
 }
 
 // Nutritional Info
@@ -840,6 +775,12 @@ button.btn,
 		}
 	}
 }
+
+// Reviews
+.review-body {
+	color: @color-swatch4;
+}
+
 
 
 

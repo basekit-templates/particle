@@ -2,8 +2,9 @@
 	"name":"Particle",
 	"thumbnail":"unknown.png",
 	"screenshot":"unknown.png",
-    "tags": { "en": ["minimal", "clean"] },
+    "tags": { "en": ["business", "clean", "corporate"] },
     "pageTypes":["home"],
+    "templateType":"general",
     "colorSwatches":
     {
         "Swatch 1": {
@@ -66,9 +67,9 @@
             "font-size": "18px",
             "font-weight": "700",
             "line-height": "60px",
-            "color": "hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1,10%), 0.7)",
+            "color": "@color-swatch6",
             "letter-spacing": "inherit",
-            "color-hover": "hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1,10%), 0.9)",
+            "color-hover": "@color-swatch1",
             "background-color": "@color-swatch2",
             "background-color-hover": "@color-swatch5"
          },
@@ -86,7 +87,7 @@
             "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "72px",
             "font-weight": "inherit",
-            "line-height": "normal",
+            "line-height": "inherit",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
@@ -94,7 +95,7 @@
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "36px",
             "font-weight": "inherit",
-            "line-height": "normal",
+            "line-height": "inherit",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },

@@ -24,7 +24,7 @@
         .ecom-productslist-image-wrap,
         .ecom-featuredproducts-image-wrap {
             margin-bottom: 1em;
-            background-color: darken(@color-swatch1,3%);
+            background-color: none;
         }
         a:hover {
 			text-decoration: none;
@@ -93,7 +93,7 @@
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
-	    border: 1px solid @color-swatch7;
+	    border: 1px solid @color-swatch2;
 	    background-color: @color-swatch1;
 	    text-indent: 0.01px;
 	    text-overflow: '';
@@ -102,8 +102,14 @@
 	    &:focus {
 			outline: 0;
 	    }
-	    @media @mobile {
-	        width: 100%;
+	    @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal)
+		.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+		select, .svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, .svg select {
+		// Remove the arrow added to the background
+		background-image: none;
+		}
+		@media @mobile {
+			        width: 100%;
 	    }
 	}
 	select::-ms-expand {
@@ -127,6 +133,7 @@
 .productlist-filter {
     .form-group {
         display: inline-block;
+        vertical-align: bottom;
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
@@ -140,15 +147,18 @@
 		line-height: @font-swatch4-line-height;
 		font-weight: normal;
     }
+
 	// Product Search
     .productlist-search {
     	@media @mobile {
-        	margin: 10px 0;
+        margin: 10px 0;
         }
         input {
+        	position: relative;
+			top: -5px;
         	max-width: 170px;
             height: 35px;
-            border: 1px solid @color-swatch7;
+            border: 1px solid @color-swatch2;
         	background-color: @color-swatch1;
         	-webkit-appearance: none;
             -moz-appearance: none;
@@ -160,10 +170,10 @@
             }
         }
         .btn {
-        	position: relative;
-        	top: -6px;
-        	margin: 0;
-            padding: 4px 14px;
+				position: relative;
+				margin: 0;
+				padding: 5px 14px;
+				top: -11px;
             @media @mobile {
             	margin-bottom: 10px;
             }
@@ -195,7 +205,7 @@
 		border-radius: 0;
 		width: 150px;
 		padding: 8px 14px 8px 22px;
-		background-image: image('/images/cart-icon.svg');
+		background-image: image('/images/basket-white.svg');
 		background-repeat: no-repeat;
         background-position: 5% 48%;
         background-size: 18px;
@@ -250,7 +260,7 @@
 	    	margin: 0;
 	    	a.ecombasket-checkout-link {
 		    	padding: 6px 8px;
-				background-color: hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3,10%), 0.7);
+				background-color: @color-swatch3;
 				color: @color-swatch1;
 				letter-spacing: @font-swatch7-letter-spacing;
 				font-size: 12px;
@@ -279,7 +289,7 @@
 		top: 9px;
 		right: 0;
 		text-indent: -9999px;
-		background-image: image('/images/ic-basket.png');
+		background-image: image('/images/basket-white.svg');
 		background-repeat: no-repeat;
         background-position: 11% 48%;
         background-size: 14px;
@@ -313,8 +323,8 @@
 	.ecom-product-variation {
 		padding: 4px 0;
 		margin-top: 10px;
-		border-top: 1px solid darken(@color-swatch1,10%);
-		border-bottom: 1px solid darken(@color-swatch1,10%);
+		border-top: 1px solid @color-swatch2;
+		border-bottom: 1px solid @color-swatch2;
 	}
 	// Select
 	.ecom-product-info .ecom-product-variation select {
@@ -325,7 +335,7 @@
         padding: 8px 33px 8px 8px;
         -webkit-appearance: none;
         -moz-appearance: none;
-        background-image: image('/images/select-arrow.svg');
+        background-image: image('/images/img-arrow-down.svg');
         background-repeat: no-repeat;
         background-size: 15px;
         background-position-x: 93%;
@@ -351,17 +361,31 @@
 	    &[name="displayCount"] {
 	        margin-bottom: 0;
 	    }
+	    @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+			// All the classes that you've added a custom dropdown arrow to
+			.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, 
+			select,
+			.svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, 
+			.svg select {
+			// Remove the arrow added to the background
+			background-image: none;
+		  }
+		}
 	}
+
+
+
+
 	// Add to Cart Button
 	.btn.ecom-product-add-to-cart-btn {
 		padding: 5px 10px 5px 14px;
-		background-image: image('/images/ic-basket.png');
+		background-image: image('/images/basket-white.svg');
 		background-repeat: no-repeat;
 	    background-position: 8% 46%;
 	    background-size: 14px;
 	    font-size: 13px;
 	    &:hover {
-	    	background-image: image('/images/ic-basket-hov.png');
+	    	background-image: image('/images/basket-white.svg');
 	    }
 		.text:before {
 			margin: 0;
@@ -372,11 +396,8 @@
 			background-image: image('/images/ic-tick.svg');
 			background-color: @color-swatch1;
 			background-size: 20px;
-			border-color: #45D645;
 			box-shadow: none;
-			&:hover {
-				color: @color-swatch4;
-			}
+			color: @color-swatch4;
 		}
 	}
 	// Product Category Info
@@ -399,8 +420,8 @@
 	.ecom-product-long-description {
 		padding: 20px 0;
 		margin-bottom: 30px;
-		border-top: 1px solid darken(@color-swatch1,10%);
-		border-bottom: 1px solid darken(@color-swatch1,10%);
+		border-top: 1px solid @color-swatch2;
+		border-bottom: 1px solid @color-swatch2;
 	}
 }
 
@@ -412,15 +433,15 @@
 	h2 { padding-bottom: 20px }
 	table {
 		margin-bottom: 30px;
-		border: 1px solid darken(@color-swatch1,10%);
+		border: 1px solid @color-swatch2;
 		border-bottom: 0;
 		@media @mobile {
-			border-bottom: 1px solid darken(@color-swatch1,10%);
+			border-bottom: 1px solid @color-swatch2;
 		}
 		// Heading Row
 		tr:first-child {
-			outline: 1px solid darken(@color-swatch1,10%);
-	        background-color: darken(@color-swatch1,4%);
+			outline: 1px solid @color-swatch2;
+	        background-color: @color-swatch7;
 	        -webkit-border-top-left-radius: 4px;
 			-webkit-border-top-right-radius: 4px;
 			-moz-border-radius-topleft: 4px;
@@ -454,7 +475,7 @@
 			border: 0;
 		}
 		tr td {
-			border-bottom: 1px solid darken(@color-swatch1,10%);
+			border-bottom: 1px solid @color-swatch2;
 			@media (max-width: 360px) {
 				float: left;
 				display: table;
@@ -473,7 +494,7 @@
 			}
 			&:nth-child(2) {
 				position: relative;
-				padding: 24px 10px;
+				padding: 24px 10px 60px;
 				@media @mobile {
 					padding: 20px 10px 10px 0;
 				}
@@ -483,8 +504,8 @@
 			}
 			&:nth-child(3) {
 				padding: 10px 20px 10px 10px;
-				// background-color: darken(@color-swatch1,2%);
-				border-left: 1px solid darken(@color-swatch1,10%);
+				// background-color: 1px solid @color-swatch2;
+				border-left: 1px solid @color-swatch2;
 				text-align: left;
 				@media @mobile {
 					padding: 20px 10px;
@@ -493,13 +514,13 @@
 				@media (max-width: 360px) { 
 					padding: 10px 20px;
 					border-left: 0;
-					border-top: 1px solid darken(@color-swatch1,10%);
+					border-top: 1px solid @color-swatch2;
 				}
 			}
 			.checkout-quantitybtn {
 				padding: 0 10px;
 				margin: 0;
-				border: 1px solid darken(@color-swatch1,10%);
+				border: 1px solid @color-swatch2;
 				@media @mobile {
 					background-color: transparent;
 					padding: 0;
