@@ -3,7 +3,7 @@
 	"thumbnail":"particle.png",
 	"screenshot":"particle.png",
     "tags": { "en": ["business", "clean", "corporate"] },
-    "pageTypes":["home", "default"],
+    "pageTypes":["home"],
     "templateType":"general",
     "colorSwatches":
     {
