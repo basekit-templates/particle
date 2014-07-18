@@ -159,7 +159,7 @@ button.btn,
 	padding: 8px 14px;
 	background-color: @color-swatch3;
 	background-size: 18px;
-	border-radius: 0;
+	border-radius: 2px;
 	border: none;
 
 
@@ -398,12 +398,14 @@ button.btn,
 	}
 }
 
-.widget.profile .bk-profile-socialicons span a {
+.widget.profile .bk-profile-socialicons span a,
+footer .widget.profile .bk-profile-socialicons span a {
 	background-color: @color-swatch3;
 	&:hover{
 		background-color: @color-swatch2;
 	}
 }
+
 
 // -----------------------------
 // Slideshow
@@ -633,7 +635,7 @@ button.btn,
 .blog-post-item {
 	margin: 0 0 2em;
 	padding: 0 0 1.3em;
-	border-bottom: @color-swatch2;
+	border-bottom: 1px solid @color-swatch2;
 	&:last-child {
 		margin-bottom: 30px;
 	}
