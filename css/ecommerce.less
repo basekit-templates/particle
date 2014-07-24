@@ -319,6 +319,10 @@
 	// Product Preview
 	.ecom-product-preview-image-wrap {
 		background-position: 0 3000%;
+
+		img {
+			max-height: 40%;
+		}
 	}
 
 	// Price
@@ -440,14 +444,13 @@
 	h2 { padding-bottom: 20px }
 	table {
 		margin-bottom: 30px;
-		border: 1px solid @color-swatch2;
+		/*border: 1px solid darken(@color-swatch7, 10%);*/
 		border-bottom: 0;
 		@media @mobile {
 			border-bottom: 1px solid @color-swatch2;
 		}
 		// Heading Row
 		tr:first-child {
-			outline: 1px solid @color-swatch2;
 	        background-color: @color-swatch7;
 	        -webkit-border-top-left-radius: 4px;
 			-webkit-border-top-right-radius: 4px;
@@ -482,7 +485,6 @@
 			border: 0;
 		}
 		tr td {
-			border-bottom: 1px solid @color-swatch2;
 			@media (max-width: 360px) {
 				float: left;
 				display: table;
@@ -512,7 +514,6 @@
 			&:nth-child(3) {
 				padding: 10px 20px 10px 10px;
 				// background-color: 1px solid @color-swatch2;
-				border-left: 1px solid @color-swatch2;
 				text-align: left;
 				@media @mobile {
 					padding: 20px 10px;
@@ -527,7 +528,7 @@
 			.checkout-quantitybtn {
 				padding: 0 10px;
 				margin: 0;
-				border: 1px solid @color-swatch2;
+				border: 1px solid darken(@color-swatch7, 10%);
 				@media @mobile {
 					background-color: transparent;
 					padding: 0;

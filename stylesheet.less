@@ -54,7 +54,7 @@ blockquote {
   background: @color-swatch7;
   border-left: 10px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(@color-swatch3), 0.7);
   				// 1px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(lighten(@color-swatch3,10%)), 0.7);
-  margin: 1.5em 10px;
+  margin: 1.5em 0px;
   padding: 10px 10px 10px 50px;
 }
 blockquote:before {
@@ -91,8 +91,16 @@ header.template-header {
 .companyname {
 	float: left;
 }
+
 .companyname {
 	margin-left: 10px;
+	max-width: 300px;
+}
+
+.default .companyname {
+	@media @tablet {
+		max-width: 70%;
+	}
 }
 
 .nav {
@@ -128,10 +136,11 @@ header.template-header {
 }
 
 .widget .extendednavigation a.pull {
-	top: 10px;
+	top: 0px;
 	background-image: image('/images/hamburger.svg');
 	height: 30px;
 	width: 30px;
+	margin-top: 4px;
 
 	&:after {
 		box-shadow: none;
@@ -139,7 +148,8 @@ header.template-header {
 	}
 }
 
-.widget.extendednavigation {
+.widget.extendednavigation{
+	.clearfix;
 	z-index: 999999;
 }
 
@@ -244,11 +254,17 @@ header.template-header {
             }
             h3 {
             	@media @mobile {
-            		line-height: 85px;
+            		line-height: 37px;
         		}
             }
             .spare {
             	padding: 14em 0 5em;
+            	@media @tablet {
+		            padding: 10em 0 5em;
+		        }
+		        @media @mobile {
+		            padding: 6em 0 5em;
+		        }
             }
         }
     }
