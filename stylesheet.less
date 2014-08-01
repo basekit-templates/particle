@@ -90,9 +90,13 @@ header.template-header {
 .company-info,
 .companyname {
 	float: left;
+	@media @tablet {
+		width: 90%;
+	}
 }
 
 .companyname {
+	.clearfix;
 	margin-left: 10px;
 	max-width: 300px;
 }

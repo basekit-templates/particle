@@ -146,12 +146,16 @@
         color: @color-swatch4;
 		line-height: @font-swatch4-line-height;
 		font-weight: normal;
+		display: block;
     }
 
 	// Product Search
     .productlist-search {
     	@media @mobile {
         margin: 10px 0;
+        }
+        label {
+        	margin-bottom: 8px;
         }
         input {
         	position: relative;
@@ -199,15 +203,14 @@
 	// Basket
 	.ecombasket-pull {
 		text-transform: uppercase;
-		padding: 8px 14px;
 		border: 2px solid @color-swatch1;
 		background-color: @color-swatch3;
 		border-radius: 0;
-		width: 150px;
-		padding: 8px 14px 8px 22px;
+		width: 170px;
+		padding: 8px 14px 8px 37px;
 		background-image: image('/images/basket-white.svg');
 		background-repeat: no-repeat;
-        background-position: 5% 48%;
+        background-position: 12% 48%;
         background-size: 18px;
 		&:hover {;
 			background-color: @color-swatch2;
