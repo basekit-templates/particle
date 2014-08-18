@@ -253,12 +253,9 @@ button.btn,
 // Click to Call
 .clicktocall a {
 	@media @mobile {
-		background-image: image('/images/ic-phone.svg');
-		text-transform: uppercase; // Remove
 		padding: 8px 14px;
-		background-color: @color-swatch1;
-		background-size: 18px;
-		box-shadow:4px 4px 0 @color-swatch1, 6px 6px 0 @color-swatch2;
+		background-color: @color-swatch3;
+		background-size: 18px; 
 		color: @font-swatch7-color;
 		font-family: @font-swatch7-font-family;
 		font-size: @font-swatch7-font-size;
@@ -266,6 +263,8 @@ button.btn,
 		line-height: @font-swatch7-line-height;
 		letter-spacing: @font-swatch7-letter-spacing;
 		-webkit-font-smoothing: initial;
+		border-radius:3px;
+		border:0;
 		&:hover {
 			background-color: @color-swatch2;
 			color: @color-swatch1;
@@ -273,11 +272,6 @@ button.btn,
 	}
 }
 // Overrides
-.widget.clicktocall a {
-	@media @mobile {
-		border: 2px solid @color-swatch2;
-	}
-}
 
 
 // Twitter Feed
