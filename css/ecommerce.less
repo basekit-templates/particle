@@ -74,58 +74,54 @@
 	}
 }
 
-// Select Boxes
 // -----------------------------
+// #Select-Boxes
+// -----------------------------
+
 
 .productlist-filter,
 .delivery {
-	select {
-		height: 35px;
-		margin-bottom: 12px;
-	    padding: 8px 33px 8px 8px;
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
-	    background-image: image('/images/img-arrow-down.svg');
-	    background-repeat: no-repeat;
-	    background-size: 15px;
-	    background-position-x: 93%;
-	    background-position-y: 55%;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		border-radius: 0;
-	    border: 1px solid @color-swatch2;
-	    background-color: @color-swatch1;
-	    text-indent: 0.01px;
-	    text-overflow: '';
-	    color: @color-swatch5;
-	    cursor: pointer;
-	    &:focus {
-			outline: 0;
-	    }
-	    @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal)
-		.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-		select, .svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, .svg select {
-		// Remove the arrow added to the background
-		background-image: none;
-		}
-		@media @mobile {
-			        width: 100%;
-	    }
-	}
-	select::-ms-expand {
-	    display: none;
-	}
-	select[name="displayCount"] {
-	    margin-bottom: 0;
-	}
+    select {
+        height: 35px;
+        margin-bottom: 12px;
+        padding: 8px 33px 8px 8px;
+        border: 1px solid @color-swatch2;
+        background-color: @color-swatch1;
+        color: @color-swatch5;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+        @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal)
+        .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+        select, .svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, .svg select {
+        // Remove the arrow added to the background
+        background-image: none;
+        }
+        @media @mobile {
+                    width: 100%;
+        }
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    select[name="displayCount"] {
+        margin-bottom: 0;
+    }
 }
 
-// Product Filter
+
+
+
+
 // -----------------------------
+// #Product-Filter
+// -----------------------------
+
 
 // Shame CSS
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-	@media @mobile {
+    @media @mobile {
         margin-bottom: 0;
     }
 }
@@ -133,38 +129,42 @@
 .productlist-filter {
     .form-group {
         display: inline-block;
-        vertical-align: bottom;
+        vertical-align: top;
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
         }
     }
+
+
     // Label
+
     label {
-    	font-family: @font-swatch2-font-family;
-    	font-size: 14px;
+        font-family: @font-swatch2-font-family;
+        font-size: 14px;
         color: @color-swatch4;
-		line-height: @font-swatch4-line-height;
-		font-weight: normal;
-		display: block;
+        line-height: @font-swatch4-line-height;
+        font-weight: normal;
+        display: block;
     }
 
-	// Product Search
+
+    // Product Search
+
     .productlist-search {
-    	@media @mobile {
+        @media @mobile {
         margin: 10px 0;
         }
         label {
-        	margin-bottom: 8px;
+            margin-bottom: 0;
         }
         input {
-        	position: relative;
-			top: -5px;
-        	max-width: 170px;
+            position: relative;
+            max-width: 170px;
             height: 35px;
             border: 1px solid @color-swatch2;
-        	background-color: @color-swatch1;
-        	-webkit-appearance: none;
+            background-color: @color-swatch1;
+            -webkit-appearance: none;
             -moz-appearance: none;
             -webkit-border-radius: 0;
             @media @mobile {
@@ -174,26 +174,33 @@
             }
         }
         .btn {
-				position: relative;
-				margin: 0;
-				padding: 5px 14px;
-				top: -11px;
+                position: relative;
+                margin: 0;
+                padding: 5px 14px;
+
+                &:hover {
+                    padding: 2px 14px;
+                }
+
             @media @mobile {
-            	margin-bottom: 10px;
+                margin-bottom: 10px;
             }
         }
     }
 }
 
+
 // Item Count
+
 .productlist-item-count {
-	font-family: @font-swatch4-font-family;
-	font-size: 14px;
-	font-weight: @font-swatch4-font-weight;
-	line-height: @font-swatch4-line-height;
-	letter-spacing: @font-swatch4-letter-spacing;
-	color: @color-swatch5;
+    font-family: @font-swatch4-font-family;
+    font-size: 14px;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    letter-spacing: @font-swatch4-letter-spacing;
+    color: @color-swatch5;
 }
+
 
 // Basket
 // -----------------------------
