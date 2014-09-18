@@ -84,7 +84,7 @@
     select {
         height: 35px;
         margin-bottom: 12px;
-        padding: 8px 33px 8px 8px;
+        padding: 8px 8px 8px 8px;
         border: 1px solid @color-swatch2;
         background-color: @color-swatch1;
         color: @color-swatch5;
@@ -171,7 +171,6 @@
         .btn {
                 position: relative;
                 margin: 0;
-                padding: 5px 14px;
                 transform: translate(0,-2px);
 
             @media @mobile {
@@ -609,9 +608,14 @@
 		width: auto;
     	height: 35px;
     	margin-bottom: 12px;
-        padding: 8px 8px 8px 8px;
+        padding: 8px 33px 8px 8px;
         -webkit-appearance: none;
         -moz-appearance: none;
+        background-image: image('/images/img-arrow-down.svg');
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position-x: 93%;
+        background-position-y: 55%;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
@@ -628,6 +632,7 @@
             width: 100%;
         }
 	    &::-ms-expand {
+	        display: none;
 	    }
 	    &[name="displayCount"] {
 	        margin-bottom: 0;
