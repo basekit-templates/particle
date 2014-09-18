@@ -124,7 +124,7 @@
     .form-group {
         display: inline-block;
         vertical-align: top;
-        @media @tablet {
+        @media only screen and (min-width: 900px) {
             display: block;
         }
         @media @mobile {
@@ -146,6 +146,8 @@
         &:focus {
             outline: 0;
         }
+        @media only screen and (min-width: 900px) {
+            width: 100%;
     }
 
 
@@ -172,7 +174,6 @@
         }
         input {
             position: relative;
-            max-width: 170px;
             height: 35px;
             border: 1px solid @color-swatch2;
             background-color: @color-swatch1;
