@@ -102,12 +102,6 @@
                     width: 100%;
         }
     }
-    select::-ms-expand {
-        display: none;
-    }
-    select[name="displayCount"] {
-        margin-bottom: 0;
-    }
 }
 
 
@@ -178,10 +172,7 @@
                 position: relative;
                 margin: 0;
                 padding: 5px 14px;
-
-                &:hover {
-                    padding: 2px 14px;
-                }
+                transform: translate(0,-2px);
 
             @media @mobile {
                 margin-bottom: 10px;
