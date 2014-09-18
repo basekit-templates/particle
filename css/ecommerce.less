@@ -122,9 +122,11 @@
 
 .productlist-filter {
     .form-group {
-        display: block;
         vertical-align: top;
         display: block;
+        @media only screen and (min-width: 768px) {
+            display: block;
+        }
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
