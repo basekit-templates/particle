@@ -168,6 +168,10 @@
         }
         label {
             margin-bottom: 0;
+            
+            @media @tablet {
+                margin-bottom: 10px;
+            }
         }
         input {
             position: relative;
@@ -178,10 +182,6 @@
             -moz-appearance: none;
             -webkit-border-radius: 0;
             transform: translate(0,4px);
-
-            @media @tablet {
-                margin-bottom: 10px;
-            }
 
             @media @mobile {
                 width: 100%;
