@@ -79,30 +79,30 @@
 // -----------------------------
 
 
-.productlist-filter,
-.delivery {
-    select {
-        height: 35px;
-        margin-bottom: 12px;
-        padding: 8px 8px 8px 8px;
-        border: 1px solid @color-swatch2;
-        background-color: @color-swatch1;
-        color: @color-swatch5;
-        cursor: pointer;
-        &:focus {
-            outline: 0;
-        }
-        @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal)
-        .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-        select, .svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, .svg select {
-        // Remove the arrow added to the background
-        background-image: none;
-        }
-        @media @mobile {
-                    width: 100%;
-        }
-    }
-}
+// .productlist-filter,
+// .delivery {
+//     select {
+//         height: 35px;
+//         margin-bottom: 12px;
+//         padding: 8px 8px 8px 8px;
+//         border: 1px solid @color-swatch2;
+//         background-color: @color-swatch1;
+//         color: @color-swatch5;
+//         cursor: pointer;
+//         &:focus {
+//             outline: 0;
+//         }
+//         @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal)
+//         .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+//         select, .svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, .svg select {
+//         // Remove the arrow added to the background
+//         background-image: none;
+//         }
+//         @media @mobile {
+//                     width: 100%;
+//         }
+//     }
+// }
 
 
 
@@ -129,6 +129,20 @@
             margin-bottom: 0;
         }
     }
+
+    // Select
+
+    select {
+        height: 35px;
+        // margin-bottom: 12px;
+        padding: 8px 8px 8px 8px;
+        border: 1px solid @color-swatch2;
+        background-color: @color-swatch1;
+        color: @color-swatch5;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
 
 
     // Label
@@ -162,6 +176,7 @@
             -moz-appearance: none;
             -webkit-border-radius: 0;
             transform: translate(0,4px);
+
             @media @mobile {
                 width: 100%;
                 max-width: 100%;
@@ -171,7 +186,6 @@
         .btn {
                 position: relative;
                 margin: 0;
-                padding-bottom: 10px;
                 transform: translate(0,-2px);
 
             @media @mobile {
