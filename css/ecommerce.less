@@ -124,7 +124,9 @@
     .form-group {
         display: inline-block;
         vertical-align: top;
-        @media only screen and (max-width: 900px) {
+        display: block;
+
+        @media only screen and (min-width: 768px) {
             display: block;
         }
         @media @mobile {
@@ -137,17 +139,14 @@
 
     select {
         height: 35px;
-        // margin-bottom: 12px;
         padding: 8px 8px 8px 8px;
         border: 1px solid @color-swatch2;
         background-color: @color-swatch1;
         color: @color-swatch5;
         cursor: pointer;
+        width: 100%;
         &:focus {
             outline: 0;
-        }
-        @media only screen and (max-width: 900px) {
-            width: 100%;
         }
     }
 
@@ -181,7 +180,7 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             -webkit-border-radius: 0;
-            transform: translate(0,9px);
+            transform: translate(0,4px);
 
             @media @mobile {
                 width: 100%;
