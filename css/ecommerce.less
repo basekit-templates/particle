@@ -125,6 +125,7 @@
         display: inline-block;
         vertical-align: top;
         display: block;
+        width: 80%;
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
@@ -163,12 +164,15 @@
     // Product Search
 
     .productlist-search {
+        @media @tablet {
+            display: block;
+        }
         @media @mobile {
         margin: 10px 0;
         }
         label {
             margin-bottom: 0;
-            
+
             @media @tablet {
                 margin-bottom: 10px;
             }
