@@ -95,13 +95,19 @@ header.template-header {
 	}
 }
 
-.companyname {
+.widget.companyname {
 	.clearfix;
 	margin-left: 10px;
 	max-width: 300px;
+	a {
+		@media @mobile {
+			font-size: (@font-swatch10-font-size * 0.7);
+			line-height: (@font-swatch10-line-height * 0.7);
+		}
+	}
 }
 
-.default .companyname {
+section.default .companyname {
 	@media @tablet {
 		max-width: 70%;
 	}
@@ -119,7 +125,7 @@ header.template-header {
 	float: left;
 }
 
-.default .template-header,
+section.default .template-header,
 .widget.feature.bk-tpl-hidden + .template-header {
 	position: relative;
 	background-color: @color-swatch2;
@@ -246,22 +252,30 @@ header.template-header {
             min-height: 400px;
         }
         @media @mobile {
-            min-height: 250px;
+            min-height: 350px;
         }
         .content {
             h2 {
             	text-shadow: 2px 2px rgba(0,0,0, .2);
-            	line-height: 80px;
+            	font-size: (@font-swatch1-font-size * 1.5);
+            	line-height: (@font-swatch1-line-height * 1.5);
             	@media @tablet {
-            		line-height: 100px;
+            		font-size: (@font-swatch1-font-size * 0.9);
+            		line-height: (@font-swatch1-line-height * 0.9);
         		}
         		@media @mobile {
-            		line-height: 50px;
+        			font-size: (@font-swatch1-font-size * 0.8);
+            		line-height: (@font-swatch1-line-height * 0.8);
         		}
             }
             h3 {
-            	@media @mobile {
-            		line-height: 37px;
+            	@media @tablet {
+            		font-size: (@font-swatch2-font-size * 0.9);
+            		line-height: (@font-swatch2-line-height * 0.9);
+        		}
+        		@media @mobile {
+        			font-size: (@font-swatch2-font-size * 0.8);
+            		line-height: (@font-swatch2-line-height * 0.8);
         		}
             }
             .spare {
@@ -270,7 +284,7 @@ header.template-header {
 		            padding: 10em 0 5em;
 		        }
 		        @media @mobile {
-		            padding: 6em 0 5em;
+		            padding: 8em 0 5em;
 		        }
             }
         }

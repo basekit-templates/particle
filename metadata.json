@@ -44,7 +44,7 @@
             "font-family": "\"Roboto\", Geneva, \"Lucida Console\", sans-serif",
             "font-size": "36px",
             "font-weight": "300",
-            "line-height": "inherit",
+            "line-height": "50px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -52,7 +52,7 @@
             "font-family": "\"Roboto\", Geneva, \"Lucida Console\", sans-serif",
             "font-size": "30px",
             "font-weight": "300",
-            "line-height": "32px",
+            "line-height": "40px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
