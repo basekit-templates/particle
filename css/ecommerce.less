@@ -121,13 +121,10 @@
 }
 
 .productlist-filter {
+    text-align: center;
+
     .form-group {
         vertical-align: top;
-        // display: block;
-        // @media only screen and (min-width: 768px) {
-        //     display: block !important;
-        //     width: 60%;
-        // }
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
@@ -146,6 +143,9 @@
         cursor: pointer;
         &:focus {
             outline: 0;
+        }
+        @media @mobile {
+            width: 100%;
         }
     }
 
@@ -185,6 +185,7 @@
             -moz-appearance: none;
             -webkit-border-radius: 0;
             transform: translate(0,4px);
+            width: 300px;
 
             @media @mobile {
                 width: 100%;
