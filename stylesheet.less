@@ -1,43 +1,57 @@
-/*	===============================
-	Colour Swatches
-	===============================
-	"color1": == Background
-	"color2": == Contrast colour
-	"color3": == Button colour
-	"color4": == Title colour
-	"color5": == Paragraph colour
-	"color6": == Nav text colour
-	"color7": == Header BG colour
-	=============================== */
+// --------------------------------
+// Particle: Stylesheet
+// --------------------------------
 
-/*	===============================
-	Font Swatches
-	===============================
-	"font1":  == Heading 1
-	"font2":  == Heading 2
-	"font3":  == Heading 3
-	"font4":  == Heading 4
-	"font5":  == Paragraph
-	"font6":  == Navigation Text
-	"font7":  == Buttons
-	"font8":  == Feature Title
-	"font9":  == Feature Subtitle
-	"font10": == Logo
-	=============================== */
+// -----------------------------
+// Editor Color Variables
+// -----------------------------
+
+// @color-swatch1: Background
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Imports
+//  2.   #Page Settings
+//  3.   #Header
+//  4.   #Extended Navigation
+//  5.   #Feature
+//  6.   #Footer
+
+
+
+
+// -----------------------------
+// 1. #Imports
+// -----------------------------
+
 
 @import "@{templateCommon}/basekit-bootstrap.less";
 @import "@{templateLocal}/css/ecommerce.less";
 @import "@{templateLocal}/css/widgets.less";
 
+
+
+
 // -----------------------------
-// Page Settings
+// 2. #Page Settings
 // -----------------------------
+
 
 // Wrapper
 .wrapper {
     width: 90%;
     margin: 0 5%;
-    overflow: hidden;
     @media only screen and (min-width: 1140px) {
     	width: 960px;
     	margin: 0 auto;
@@ -68,16 +82,17 @@ blockquote p {
   display: inline;
 }
 
-// -----------------------------
-// Page Content
-// -----------------------------
-.page-content {
-
+pre {
+    overflow: hidden;
 }
 
+
+
+
 // -----------------------------
-// Header
+// 3. #Header
 // -----------------------------
+
 
 header.template-header {
 	position: absolute;
@@ -134,9 +149,13 @@ section.default .template-header,
 
 }
 
+
+
+
 // -----------------------------
-// Extended Navigation
+// 4. #Extended Navigation
 // -----------------------------
+
 
 .nav {
 	max-width: 620px;
@@ -164,7 +183,7 @@ section.default .template-header,
 }
 
 .widget .extendednavigation ul {
-	@media @tablet {		
+	@media @tablet {
 		background-image: -o-linear-gradient(-90deg, hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 0.8) 0%, @color-swatch2 100%);
 		background-image: -moz-linear-gradient(-90deg, hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 0.8) 0%, @color-swatch2 100%);
 		background-image: -ms-linear-gradient(-90deg, hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 0.8) 0%, @color-swatch2 100%);
@@ -179,7 +198,7 @@ section.default .template-header,
 		}
 		// Nav Links
 		a {
-			color: hsla(hue(@color-swatch6), saturation(@color-swatch6), lightness(@color-swatch6), 0.7);
+			color: fade(@font-swatch6-color,80%);
 			line-height: 40px;
 			&:hover {
 				color: @font-swatch6-color;
@@ -194,9 +213,9 @@ section.default .template-header,
 			background-image: none;
 		}
 		&.folder {
-			color: @font-swatch6-color;
+			color: fade(@font-swatch6-color,80%);
 			&:hover {
-				color: hsla(hue(@color-swatch6), saturation(@color-swatch6), lightness(@color-swatch6), 0.7);
+				color: fade(@font-swatch6-color,80%);
   				background-color: darken(@color-swatch2,10%);
 
 			}
@@ -204,7 +223,7 @@ section.default .template-header,
 				border: 0;
 			}
 			span.text {
-				color: hsla(hue(@color-swatch6), saturation(@color-swatch6), lightness(@color-swatch6), 0.7);
+				color: fade(@font-swatch6-color,80%);
 				line-height: 40px;
 			}
 			& > .text:after {
@@ -236,9 +255,13 @@ section.default .template-header,
 	}
 }
 
+
+
+
 // -----------------------------
-// Feature
+// 5. #Feature
 // -----------------------------
+
 
 .widget.feature {
 	margin-bottom: 60px;
@@ -291,9 +314,13 @@ section.default .template-header,
     }
 }
 
+
+
+
 // -----------------------------
-// Footer
+// 6. #Footer
 // -----------------------------
+
 
 footer.template-footer {
 	padding: 4em 0;
@@ -307,8 +334,3 @@ footer.template-footer {
 	padding-bottom: 20px;
 	}
 }
-
-
-
-
-
