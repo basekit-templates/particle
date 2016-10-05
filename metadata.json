@@ -1,7 +1,7 @@
 {
 	"name":"Particle",
 	"thumbnail":"particle.png",
-	"screenshot":"particle.png",
+	"screenshot":"particle-screenshot.jpg",
     "tags": { "en": ["business", "clean", "corporate"] },
     "pageTypes":["home"],
     "templateType":"standard",
