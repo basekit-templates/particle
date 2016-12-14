@@ -129,6 +129,38 @@ textarea,
 	}
 }
 
+.advancedcontactform select {
+	display: block;
+	width: auto;
+    height: 60px;
+    margin-bottom: 12px;
+    padding: 8px 33px 8px 8px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+    border: 1px solid darken(@color-swatch1,10%);
+    background-color: @color-swatch1;
+    text-indent: 0.01px;
+    text-overflow: '';
+    color: @color-swatch5;
+    cursor: pointer;
+    border-color:darken(@color-swatch7,5%);
+    &:focus {
+		outline: 0;
+    }
+    @media @mobile {
+        width: 100%;
+    }
+	&::-ms-expand {
+	    display: none;
+	}
+	&[name="displayCount"] {
+	    margin-bottom: 0;
+	}
+}
+
+
+
 // -----------------------------
 // Buttons
 // -----------------------------
@@ -155,7 +187,8 @@ button.btn,
 .blog-post-more-link a,
 .ecombasket-checkout-link,
 .widget.ecomcheckout .checkout-order-button,
-.blog-list-footer a {
+.blog-list-footer a,
+.advancedcontactform button {
 	padding: 10px 14px 12px;
 	background-color: @color-swatch3;
 	background-size: 18px;
