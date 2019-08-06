@@ -27,10 +27,6 @@
   overflow: inherit;
 }
 
-.template-header .wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
 
 .widget.feature {
     margin-bottom: 0;
@@ -112,6 +108,25 @@
        margin-bottom: 0;
   }
 }
+
+
+.template-header .wrapper,
+.template-footer .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    
+    
+  @media @tablet {
+    width: 90%;
+    margin: 0 5%;
+  }
+  @media @mobile {
+    width: 90%;
+    margin: 0 5%;
+  }
+  
+}
+
 
 
 } // End of #migrated-site
